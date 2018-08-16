@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import Account from '../records/Account';
+
 export default class AccountComponent extends Component {
 
   render() {
@@ -17,6 +19,6 @@ export default class AccountComponent extends Component {
 }
 
 AccountComponent.propTypes = {
-  account: PropTypes.object.isRequired,
+  account: PropTypes.instanceOf(Account).isRequired,
   updateClicked: PropTypes.func.isRequired
 };
